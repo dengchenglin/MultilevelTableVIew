@@ -62,7 +62,7 @@
     if(_dataSoure && [_dataSoure respondsToSelector:@selector(mtableView:heightForHeaderInSection:)]){
         return [_dataSoure mtableView:self heightForHeaderInSection:section];
     }
-    return 0;
+    return 50;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(_dataSoure && [_dataSoure respondsToSelector:@selector(mtableView:viewForHeaderInSection:)]){

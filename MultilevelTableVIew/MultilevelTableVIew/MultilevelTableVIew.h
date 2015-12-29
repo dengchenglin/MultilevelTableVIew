@@ -27,13 +27,16 @@ typedef NS_ENUM(NSInteger, ExpandStye) {
 - (void)mtableView:(MultilevelTableVIew *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)mtableView:(MultilevelTableVIew *)tableView touchHeaderForSection:(NSInteger)section isOpen:(BOOL)isOpen;
 @end
+
 @protocol MultilevelTableViewDataSoure <NSObject>
+
 @required
+- (NSInteger)mnumberOfSectionsInTableView:(MultilevelTableVIew *)tableView;
+- (UIView *)mtableView:(MultilevelTableVIew *)tableView viewForHeaderInSection:(NSInteger)section;
 - (NSInteger)mtableView:(MultilevelTableVIew *)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell *)mtableView:(MultilevelTableVIew *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @optional
 - (CGFloat)mtableView:(MultilevelTableVIew *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (NSInteger)mnumberOfSectionsInTableView:(MultilevelTableVIew *)tableView;
 - (CGFloat)mtableView:(MultilevelTableVIew *)tableView heightForHeaderInSection:(NSInteger)section;
-- (UIView *)mtableView:(MultilevelTableVIew *)tableView viewForHeaderInSection:(NSInteger)section;
 @end
