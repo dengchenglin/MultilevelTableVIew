@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MultilevelTableVIew.h"
 @interface ViewController : UIViewController
-
+@property (nonatomic,strong) MultilevelTableVIew *tableView;
 
 @end
 
